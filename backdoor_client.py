@@ -68,7 +68,7 @@ while True:
             reponse = " "
         reponse = reponse.encode()
 
-    # reponse est déjà encodé
+
     data_len = len(reponse)
     header = str(data_len).zfill(13)
     print("header:", header)
@@ -76,6 +76,6 @@ while True:
     if data_len > 0:
         s.sendall(reponse)
     
-    # handshake
+ 
 
 s.close()
